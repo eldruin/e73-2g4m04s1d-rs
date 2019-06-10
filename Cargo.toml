@@ -6,6 +6,7 @@ repository = "https://github.com/eldruin/e73-2g4m04s1d-rs"
 license = "MIT OR Apache-2.0"
 description = "Rust example programs running on the Ebyte E73-2G4M04S1D BLE module board (nRF51822-based)."
 readme = "README.md"
+edition = "2018"
 keywords = ["example", "ebyte", "nrf51", "arm", "cortex-m"]
 categories = ["embedded", "hardware-support", "no-std"]
 homepage = "https://github.com/eldruin/e73-2g4m04s1d-rs"
