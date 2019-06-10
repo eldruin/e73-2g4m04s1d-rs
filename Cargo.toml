@@ -24,6 +24,7 @@ include = [
 travis-ci = { repository = "eldruin/e73-2g4m04s1d-rs", branch = "master" }
 
 [dependencies]
+embedded-hal = "0.2.3"
 cortex-m = "0.6"
 cortex-m-rt = "0.6.7"
 nb = "0.1.1"
