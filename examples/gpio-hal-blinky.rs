@@ -20,10 +20,11 @@
 #![no_main]
 #![no_std]
 
-use panic_halt;
-use nrf51_hal as hal;
+extern crate panic_halt;
 use hal::delay::Delay;
-use hal::prelude::*;
+use hal::gpio::GpioExt;
+use hal::hal::{blocking::delay::DelayMs, digital::v2::OutputPin};
+use nrf51_hal as hal;
 
 use cortex_m_rt::entry;
 
@@ -36,9 +37,9 @@ fn main() -> ! {
         let mut led = gpio.pin20.into_push_pull_output();
 
         loop {
-            led.set_low();
+            led.set_low().unwrap();
             delay.delay_ms(1000_u16); // 1 second
-            led.set_high();
+            led.set_high().unwrap();
             delay.delay_ms(1000_u16); // 1 second
         }
     }
