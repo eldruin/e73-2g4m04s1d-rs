@@ -20,11 +20,11 @@
 #![no_main]
 #![no_std]
 
+extern crate nrf51_hal as hal;
 extern crate panic_halt;
 use hal::delay::Delay;
 use hal::gpio::GpioExt;
 use hal::hal::{blocking::delay::DelayMs, digital::v2::OutputPin};
-use nrf51_hal as hal;
 
 use cortex_m_rt::entry;
 
